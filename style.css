@@ -1,0 +1,32 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.emoji {
+  font-size: 8rem;
+  filter: grayscale(1);
+  transition-property: transform, filter;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+.emoji:hover {
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
